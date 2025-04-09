@@ -8,6 +8,7 @@ class CreatePassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor:Colors.white,
         title: Text(
           "Back",
           textAlign: TextAlign.start,
@@ -20,6 +21,7 @@ class CreatePassword extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios),
         ),
       ),
+      backgroundColor:Colors.white,
       body: Padding(
         padding: EdgeInsets.all(8),
         child: Form(
@@ -76,7 +78,7 @@ class CreatePassword extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              GestureDetector(
+              InkWell(
                 onTap: () {},
                 child: Container(
                   height: 50,
@@ -96,6 +98,7 @@ class CreatePassword extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height:25),
               Center(
                 child: Column(
                   children: [

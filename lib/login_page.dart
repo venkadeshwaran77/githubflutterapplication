@@ -20,9 +20,9 @@ class _loginscreenState extends State<loginscreen> {
           style: TextStyle(color: Colors.black54, fontSize: 20),
         ),
         backgroundColor: Colors.white,
-        leading: IconButton(onPressed:(){}, icon:Icon(Icons.arrow_back_ios),
-        ),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
       ),
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Form(
@@ -37,7 +37,7 @@ class _loginscreenState extends State<loginscreen> {
                   color: lightColorScheme.primary,
                 ),
               ),
-              SizedBox(height:25),
+              SizedBox(height: 25),
               TextFormField(
                 decoration: InputDecoration(
                   label: Text('User ID'),
@@ -71,6 +71,7 @@ class _loginscreenState extends State<loginscreen> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment:MainAxisAlignment.end,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -111,16 +112,18 @@ class _loginscreenState extends State<loginscreen> {
                       ),
                     ),
                   ),
-                 ),
+                ),
               ),
-               Expanded(
+              SizedBox(height: 20),
+              Expanded(
                 child: Column(
-                   children: [
+                  children: [
                     Image(
-                      image:AssetImage("assets/login.png"),
-                      height:200,
-                      width:200,
-                      ),
+                      image: AssetImage("assets/login.png"),
+                      height: 200,
+                      width: 200,
+                    ),
+                    SizedBox(height: 35),
                     Padding(
                       padding: const EdgeInsets.only(
                         bottom: BorderSide.strokeAlignCenter,
@@ -132,11 +135,19 @@ class _loginscreenState extends State<loginscreen> {
                             'Already have an account?',
                             style: TextStyle(color: Colors.black45),
                           ),
-                          Text(
-                            "Login Now",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: lightColorScheme.primary,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushReplacementNamed(
+                                context,
+                                "otp_screen",
+                              );
+                            },
+                            child: Text(
+                              "Login Now",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: lightColorScheme.primary,
+                              ),
                             ),
                           ),
                         ],

@@ -19,6 +19,7 @@ class ForgotPasswordscreen extends StatelessWidget {
          }, icon:Icon(Icons.arrow_back_ios),
         ),
       ),
+      backgroundColor:Colors.white,
       body:SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -31,6 +32,7 @@ class ForgotPasswordscreen extends StatelessWidget {
              color:lightColorScheme.primary,
              ),
              ),
+             SizedBox(height:20),
               Text("Dont\t' Worry ! it Occurs Please Enter the Email Linked",
                 style:TextStyle(color:Colors.black38,fontSize:14),
                 ),
@@ -42,8 +44,8 @@ class ForgotPasswordscreen extends StatelessWidget {
                 SizedBox(height:20),
                 TextFormField(
                   decoration: InputDecoration(
-                    label: Text('User ID'),
-                    hintText: "Enter User ID",
+                    label: Text('Email ID'),
+                    hintText: "Enter Email ID",
                     hintStyle: TextStyle(color: Colors.black26),
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black12),
@@ -73,7 +75,7 @@ class ForgotPasswordscreen extends StatelessWidget {
                       ),
                     ),
                    ),
-                   SizedBox(height:20),
+                   SizedBox(height:30),
                    Center(
                      child: Column(
                       children: [
@@ -84,6 +86,7 @@ class ForgotPasswordscreen extends StatelessWidget {
                       ],
                      ),
                    ),
+                   SizedBox(height:30),
                    Padding(
                         padding: const EdgeInsets.only(
                           bottom: BorderSide.strokeAlignCenter,
