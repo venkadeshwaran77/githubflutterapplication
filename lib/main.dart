@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       color:lightColorScheme.primary,
      initialRoute:"Login_screen",
      routes: {
-      "Login_screen":(context)=>loginscreen(),
+      "Login_screen":(context)=>Loginscreen(),
       "create_Password":(context)=>CreatePassword(),
       "forgot_password":(context)=> ForgotPasswordscreen(),
       "otp_screen":(context)=>OtpScreen(),

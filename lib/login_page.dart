@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/cliper.dart';
 import 'package:flutter_application_1/thems/colors.theme.dart';
 
-class loginscreen extends StatefulWidget {
-  const loginscreen({super.key});
+class Loginscreen extends StatefulWidget {
+  const Loginscreen({super.key});
 
   @override
-  State<loginscreen> createState() => _loginscreenState();
+  State<Loginscreen> createState() => _LoginscreenState();
 }
 
-class _loginscreenState extends State<loginscreen> {
+class _LoginscreenState extends State<Loginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +115,7 @@ class _loginscreenState extends State<loginscreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height:15),
               Expanded(
                 child: Column(
                   children: [
@@ -123,7 +124,15 @@ class _loginscreenState extends State<loginscreen> {
                       height: 200,
                       width: 200,
                     ),
-                    SizedBox(height: 35),
+                    ClipOval(
+                        clipper: CustomClip(),
+                        child: Container(
+                          width: 120,
+                          height: 80,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                    SizedBox(height:10),
                     Padding(
                       padding: const EdgeInsets.only(
                         bottom: BorderSide.strokeAlignCenter,

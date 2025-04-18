@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/cliper.dart';
 import 'package:flutter_application_1/thems/colors.theme.dart';
 import 'package:pinput/pinput.dart';
 
@@ -98,7 +99,7 @@ class OtpScreen extends StatelessWidget {
                     ),
               ],
             ),
-          SizedBox(height: 35),
+          SizedBox(height:15),
           Expanded(
             child: Column(
               children: [
@@ -107,7 +108,15 @@ class OtpScreen extends StatelessWidget {
                   height: 200,
                   width: 200,
                 ),
-                SizedBox(height: 40),
+                 ClipOval(
+                        clipper: CustomClip(),
+                        child: Container(
+                          width: 120,
+                          height: 80,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                SizedBox(height:10),
                 Padding(
                   padding: const EdgeInsets.only(
                     bottom: BorderSide.strokeAlignCenter,

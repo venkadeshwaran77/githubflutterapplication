@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/cliper.dart';
 import 'package:flutter_application_1/thems/colors.theme.dart';
 
 class CreatePassword extends StatelessWidget {
@@ -107,6 +108,14 @@ class CreatePassword extends StatelessWidget {
                       height: 200,
                       width: 200,
                     ),
+                     ClipOval(
+                        clipper: CustomClip(),
+                        child: Container(
+                          width: 120,
+                          height: 80,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
                   ],
                 ),
               ),

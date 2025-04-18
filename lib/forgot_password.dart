@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/cliper.dart';
 import 'package:flutter_application_1/thems/colors.theme.dart';
 
 class ForgotPasswordscreen extends StatelessWidget {
@@ -7,41 +8,46 @@ class ForgotPasswordscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
+      appBar: AppBar(
         title: Text(
           "Back",
           textAlign: TextAlign.start,
           style: TextStyle(color: Colors.black54, fontSize: 20),
         ),
         backgroundColor: Colors.white,
-         leading: IconButton(onPressed:(){
-          Navigator.pushReplacementNamed(context,"Login_screen");
-         }, icon:Icon(Icons.arrow_back_ios),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, "Login_screen");
+          },
+          icon: Icon(Icons.arrow_back_ios),
         ),
       ),
-      backgroundColor:Colors.white,
-      body:SingleChildScrollView(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Form(
-          child:Column(
-            crossAxisAlignment:CrossAxisAlignment.start,
-               children: [
-             Text("Forgot Password ?",
-             style:TextStyle(fontSize:25,fontWeight:FontWeight.w600,
-             color:lightColorScheme.primary,
-             ),
-             ),
-             SizedBox(height:20),
-              Text("Dont\t' Worry ! it Occurs Please Enter the Email Linked",
-                style:TextStyle(color:Colors.black38,fontSize:14),
-                ),
-                Text("with your Account",
-                style:TextStyle(
-                  color:Colors.black38,fontSize:14,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Forgot Password ?",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w600,
+                    color: lightColorScheme.primary,
                   ),
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
+                Text(
+                  "Dont\t' Worry ! it Occurs Please Enter the Email Linked",
+                  style: TextStyle(color: Colors.black38, fontSize: 14),
+                ),
+                Text(
+                  "with your Account",
+                  style: TextStyle(color: Colors.black38, fontSize: 14),
+                ),
+                SizedBox(height: 20),
                 TextFormField(
                   decoration: InputDecoration(
                     label: Text('Email ID'),
@@ -57,62 +63,75 @@ class ForgotPasswordscreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Container(
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: lightColorScheme.primary,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Send code",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: lightColorScheme.primary,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Send code",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                   ),
-                   SizedBox(height:30),
-                   Center(
-                     child: Column(
-                      children: [
-                        Image(image:AssetImage("assets/forgotpassword.png"),
-                        height:200,
+                  ),
+                ),
+                SizedBox(height:30),
+                Center(
+                  child: Column(
+                    children: [
+                      Image(
+                        image: AssetImage("assets/forgotpassword.png"),
+                        height: 200,
                         width:200,
-                        ),
-                      ],
-                     ),
-                   ),
-                   SizedBox(height:30),
-                   Padding(
-                        padding: const EdgeInsets.only(
-                          bottom: BorderSide.strokeAlignCenter,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Already have an account?',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                            Text(
-                              "Login Now",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: lightColorScheme.primary,
-                              ),
-                            ),
-                          ],
+                      ),
+                     ClipOval(
+                        clipper: CustomClip(),
+                        child: Container(
+                          width: 120,
+                          height: 80,
+                          color: Colors.grey.shade300,
+                        
                         ),
                       ),
-               ],
-          ),
+                    
+                    ],
+                  ),
+                ),
+                SizedBox(height: 30),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: BorderSide.strokeAlignCenter,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Already have an account?',
+                        style: TextStyle(color: Colors.black45),
+                      ),
+                      Text(
+                        "Login Now",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: lightColorScheme.primary,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-      ) ,
+      ),
     );
   }
 }
+
+
